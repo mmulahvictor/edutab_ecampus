@@ -1,0 +1,35 @@
+.basic-concepts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.basic-concep h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.basic-concep ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.basic-concep li {
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 12px 20px #ccc;
+}

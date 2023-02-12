@@ -1,24 +1,23 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import BasicConcepts from "./components/BasicConcepts";
-import AdvancedConcepts from "./components/AdvancedConcepts";
-import Projects from "./components/Projects";
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from '././components/Home';
+import Navbar from '././components/Navbar';
+import BasicConcepts from '././components/BasicConcepts';
+import AdvancedConcepts from '././components/AdvancedConcepts';
+import Projects from '././components/Projects';
 
 function App () {
-  const location = useLocation();
-
   return (
     <div>
       <Navbar />
-      { location.pathname === '/' && <Home /> }
-      { location.pathname === '/basic-concepts' && <BasicConcepts /> }
-      { location.pathname === '/advanced-concepts' && <AdvancedConcepts /> }
-      { location.pathname === '/projects' && <Projects /> }
+        <Routes>
+          <Route exact path="/" element={ <Home /> } />
+          <Route path="/basic-concepts" element={ <BasicConcepts /> } />
+          <Route path="/advanced-concepts" element={ <AdvancedConcepts /> } />
+          <Route path="/projects" element={ <Projects /> } />
+        </Routes>
     </div>
   );
 }
-
 
 export default App;
